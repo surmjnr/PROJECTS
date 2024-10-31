@@ -1,0 +1,283 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    overflow-x: hidden;
+
+
+
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: 80vh;
+}
+
+.stats {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.header-container h3 {
+    color: #2c3e50;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.header-container .nav-button {
+    margin-left: auto;
+}
+
+.sets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    justify-content: center;
+}
+
+.sets-container p {
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2c3e50;
+}
+
+.sets-container span {
+    font-weight: 600;
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+    padding: 4px 12px;
+    border-radius: 15px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.assignment-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    align-items: center;
+    text-align: center;
+}
+
+#studentSelect, #assignButton {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 8px;
+}
+
+.assigned-number {
+    display: block;
+    margin: 10px 0;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    min-width: 400px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+button {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+th {
+    background: #4CAF50;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+#assignButton {
+    display: inline-block;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+#assignButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+}
+
+#assignButton:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.nav-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    #studentSelect, #assignButton {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .sets-container p {
+        font-size: 14px;
+        min-width: 120px;
+    }
+    
+    .sets-container span {
+        min-width: 50px;
+        padding: 4px 8px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sets-container {
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .sets-container p {
+        min-width: 100px;
+        font-size: 13px;
+    }
+    
+    th, td {
+        padding: 6px;
+        font-size: 13px;
+    }
+    
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#clearButton {
+    background-color: #ff4444;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#clearButton:hover {
+    background-color: #cc0000;
+}

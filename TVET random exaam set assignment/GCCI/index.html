@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Set Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhanced-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exam Set Assignment System</h1>
+        
+        <div class="stats">
+            <div class="header-container">
+                <h3>Distribution of Sets:</h3>
+                <div class="button-container">
+                    <a href="addStudents.html" class="nav-button">Add Students</a>
+                    <button id="clearButton" class="nav-button">Clear All Assignments</button>
+                </div>
+            </div>
+            <div class="sets-container">
+                <p>Total Students: <span id="totalStudents">0</span></p>
+                <p>Set 1: <span id="set1Count">0/0</span></p>
+                <p>Set 2: <span id="set2Count">0/0</span></p>
+                <p>Set 3: <span id="set3Count">0/0</span></p>
+            </div>
+        </div>
+
+        <div class="assignment-section">
+            <select id="studentSelect">
+                <option value="">Select your name</option>
+            </select>
+            <button id="assignButton" disabled>Assign Exam Set</button>
+            <span id="assignedNumber" class="assigned-number"></span>
+        </div>
+
+        <div class="table-container">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Exam Set</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
