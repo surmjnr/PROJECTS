@@ -28,7 +28,7 @@ A web-based system for randomly assigning students to different exam sets while 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/exam-set-assignment.git
+git clone https://github.com/surmjnr/exam-set-assignment.git
 ```
 
 2. Navigate to the project directory:
